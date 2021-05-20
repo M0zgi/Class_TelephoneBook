@@ -12,23 +12,18 @@ class PhoneBook
 
 private:
 
-	char *FIO = new char[2];
-	int HomeTel;
-	int WorkTel;
-	int MobileTel;
-	char *DopInfo = new char[2];
+	char *FIO;
 
 public:
-	PhoneBook(const char *f, int h, int w, int m, const char *d);
-	//PhoneBook();
-
-	void ShowPhoneBook();
+	
+	PhoneBook();
+	PhoneBook(const char *f);
+	
 	~PhoneBook();
 
-
+	void ShowPhoneBook();
 
 };
-
 
 
 

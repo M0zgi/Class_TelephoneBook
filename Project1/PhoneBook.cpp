@@ -1,23 +1,22 @@
 #include "PhoneBook.h"
 
-PhoneBook::PhoneBook(const char *f, int h, int w, int m, const char *d)
+PhoneBook::PhoneBook()
 {
-	*FIO = *f;
-	HomeTel = h;
-	WorkTel = w;
-	MobileTel = m;
-	*DopInfo = *d;
+	*FIO = 'Z';
 }
 
-//PhoneBook::PhoneBook()
-//{
-//}
 
-void PhoneBook::ShowPhoneBook()
+PhoneBook::PhoneBook(const char *f)
 {
-	cout << FIO << endl << HomeTel << endl << WorkTel << endl << MobileTel << endl << DopInfo;
+	FIO = new char[10];
+	*FIO = *f;
 }
 
 PhoneBook::~PhoneBook()
 {
+}
+
+void PhoneBook::ShowPhoneBook()
+{
+	cout << "ÔÈÎ: " << FIO;
 }

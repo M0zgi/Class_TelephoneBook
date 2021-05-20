@@ -7,12 +7,14 @@
  *         osama_f2005@hotmail.com         *
  *******************************************/
 
+//PhoneBook p;
+
 
 PhoneBook* p = new PhoneBook[3]
 {
-	{"FF", 512, 98, 93, "1f"},
-	{"AA", 512, 98, 93, "2A"},
-	{"DD", 512, 98, 93, "3D"}
+	{"A"},
+	{"B"},
+	{"DD DD"}
 };
 
 
@@ -42,10 +44,11 @@ void MenuFun1()
 	system("cls"); //clear the screen.	
 
 	gotoxy(25, 10);
-	cout << "1";
+	cout << "1" << endl;
 
-	p[1].ShowPhoneBook();
-
+	
+	p[2].ShowPhoneBook();
+	
 	_getch();
 	system("cls");
 }
