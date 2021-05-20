@@ -12,14 +12,14 @@ class PhoneBook
 
 private:
 
-	char *FIO[80];
+	char *FIO = new char[2];
 	int HomeTel;
 	int WorkTel;
 	int MobileTel;
-	char *DopInfo[80];
+	char *DopInfo = new char[2];
 
 public:
-	PhoneBook(char *f, int h, int w, int m, char *d);
+	PhoneBook(const char *f, int h, int w, int m, const char *d);
 	//PhoneBook();
 
 	void ShowPhoneBook();

@@ -1,12 +1,12 @@
 #include "PhoneBook.h"
 
-inline PhoneBook::PhoneBook(char *f, int h, int w, int m, char *d)
+PhoneBook::PhoneBook(const char *f, int h, int w, int m, const char *d)
 {
-	FIO[80] = f;
+	*FIO = *f;
 	HomeTel = h;
 	WorkTel = w;
 	MobileTel = m;
-	DopInfo[80] = d;
+	*DopInfo = *d;
 }
 
 //PhoneBook::PhoneBook()
@@ -15,7 +15,7 @@ inline PhoneBook::PhoneBook(char *f, int h, int w, int m, char *d)
 
 void PhoneBook::ShowPhoneBook()
 {
-	cout << FIO << " " << HomeTel << " " << WorkTel << " " << MobileTel << " " << DopInfo;
+	cout << FIO << endl << HomeTel << endl << WorkTel << endl << MobileTel << endl << DopInfo;
 }
 
 PhoneBook::~PhoneBook()

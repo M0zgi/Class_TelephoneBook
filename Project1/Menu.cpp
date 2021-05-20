@@ -10,9 +10,9 @@
 
 PhoneBook* p = new PhoneBook[3]
 {
-	{"FF", 512, 98, 93, "1 f"},
-	{"A A A", 512, 98, 93, "2 A"},
-	{"D D D D ", 512, 98, 93, "3 D"}
+	{"FF", 512, 98, 93, "1f"},
+	{"AA", 512, 98, 93, "2A"},
+	{"DD", 512, 98, 93, "3D"}
 };
 
 
@@ -44,7 +44,7 @@ void MenuFun1()
 	gotoxy(25, 10);
 	cout << "1";
 
-	p[0].ShowPhoneBook();
+	p[1].ShowPhoneBook();
 
 	_getch();
 	system("cls");
