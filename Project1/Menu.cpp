@@ -1,3 +1,5 @@
+
+
 #include"PhoneBook.h"
 
 
@@ -10,23 +12,18 @@
 //PhoneBook p;
 
 
-PhoneBook* p = new PhoneBook[3]
-{
-	{"A"},
-	{"B"},
-	{"DD DD"}
-};
+
 
 
  //-----------------------------------------------------------------------------------------------
 string* MenuItems() // this function returns a pointer to a string.
 {
 	string* item = new string[5];
-	item[0] = "1. Сложение дробей";
-	item[1] = "2. Вычетание дробей";
-	item[2] = "3. Умножение дробей";
-	item[3] = "4. Деление дробей";
-	item[4] = "5. Выход из программы";
+	item[0] = "Телефонная книга";
+	item[1] = "Добавление пользователя";
+	item[2] = "Удаление пользователя";
+	item[3] = "Поиск и редактирование пользователя";
+	item[4] = "Выход из программы";
 
 	return item;
 }
@@ -43,12 +40,25 @@ void MenuFun1()
 {
 	system("cls"); //clear the screen.	
 
-	gotoxy(25, 10);
-	cout << "1" << endl;
+	//gotoxy(25, 10);
 
+	PhoneBook* p = new PhoneBook[3]
+	{
+		{"Зеленский Петр Алексеевич", "+38(093)333333333"},
+		{"Путин Владимир Александрович", "38097 777-333-333"},
+		{"Порошенко Владимир Владимирович", "666"}
+	};
+
+	cout << "Телефонная книга" << endl;
+
+	for (size_t i = 0; i < 3; i++)
+	{
+		p[i].ShowPhoneBook();
+	}
 	
-	p[2].ShowPhoneBook();
 	
+	delete[]p;
+	system("pause");
 	_getch();
 	system("cls");
 }

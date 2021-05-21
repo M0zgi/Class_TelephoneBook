@@ -1,4 +1,5 @@
 #pragma once
+#define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <Windows.h>
 #include <string.h>
@@ -13,11 +14,12 @@ class PhoneBook
 private:
 
 	char *FIO;
+	char* MobPhone;
 
 public:
 	
 	PhoneBook();
-	PhoneBook(const char *f);
+	PhoneBook(const char *_fio, const char* _mobphone);
 	
 	~PhoneBook();
 
