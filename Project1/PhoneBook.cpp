@@ -1,9 +1,10 @@
 #include "PhoneBook.h"
 
+
 PhoneBook::PhoneBook()
 {
-	*FIO = 'Z';
-	*MobPhone = '9';
+	*FIO = '-';
+	*MobPhone = '-';
 }
 
 
@@ -26,6 +27,19 @@ PhoneBook::~PhoneBook()
 	delete []FIO;
 	delete []MobPhone;
 	//cout << "DIS" << endl;
+}
+
+PhoneBook::PhoneBook(const PhoneBook& obj)
+{
+	int count_fio, count_mobphone;
+	count_fio = strlen(obj.FIO);
+	count_mobphone = strlen(obj.MobPhone);
+
+	FIO = new char[count_fio + 1];
+	MobPhone = new char[count_fio + 1];
+
+	strcpy(FIO, obj.FIO);
+	strcpy(MobPhone, obj.MobPhone);	
 }
 
 void PhoneBook::ShowPhoneBook()

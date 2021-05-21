@@ -1,6 +1,5 @@
-
-
 #include"PhoneBook.h"
+
 
 
 /*******************************************
@@ -58,7 +57,7 @@ void MenuFun1()
 	
 	
 	delete[]p;
-	system("pause");
+	
 	_getch();
 	system("cls");
 }

@@ -5,6 +5,7 @@
 #include <string.h>
 #include <conio.h>
 
+
 using namespace std;
 
 
@@ -21,6 +22,9 @@ public:
 	PhoneBook();
 	PhoneBook(const char *_fio, const char* _mobphone);
 	
+	//конструктор копирования
+	PhoneBook(const PhoneBook& obj);
+
 	~PhoneBook();
 
 	void ShowPhoneBook();
