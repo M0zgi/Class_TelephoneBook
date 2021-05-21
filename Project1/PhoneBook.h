@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #define _CRT_SECURE_NO_WARNINGS
 #include <iostream>
 #include <Windows.h>
@@ -22,7 +22,7 @@ public:
 	PhoneBook();
 	PhoneBook(const char *_fio, const char* _mobphone);
 	
-	//конструктор копирования
+	//РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ РєРѕРїРёСЂРѕРІР°РЅРёСЏ
 	PhoneBook(const PhoneBook& obj);
 
 	~PhoneBook();

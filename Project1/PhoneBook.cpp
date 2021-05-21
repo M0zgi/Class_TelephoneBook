@@ -1,4 +1,4 @@
-#include "PhoneBook.h"
+ï»¿#include "PhoneBook.h"
 
 
 PhoneBook::PhoneBook()
@@ -44,11 +44,11 @@ PhoneBook::PhoneBook(const PhoneBook& obj)
 
 void PhoneBook::ShowPhoneBook()
 {
-	cout << "ÔÈÎ: " << FIO;
+	cout << "Ð¤Ð˜Ðž: " << FIO;
 	
 
 	cout << endl;
-	cout << "Òåë: " << MobPhone;
+	cout << "Ð¢ÐµÐ»: " << MobPhone;
 	cout << endl;
 	
 }
