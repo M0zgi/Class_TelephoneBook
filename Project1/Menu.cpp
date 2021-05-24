@@ -1,5 +1,5 @@
 ﻿#include"PhoneBook.h"
-
+#include"User.h"
 
 
 /*******************************************
@@ -49,21 +49,16 @@ void gotoxy(int xpos, int ypos)  // just take this function as it is.
 //-----------------------------------------------------------------------------------------------
 void MenuFun1()
 {
-	system("cls"); //clear the screen.	
+	system("cls"); 
 
 	//gotoxy(25, 10);
-
-	
 
 	cout << "Телефонная книга" << endl;
 
 	for (size_t i = 0; i < countabon; i++)
 	{
 		p[i].ShowPhoneBook();
-	}
-	
-	
-	
+	}	
 	
 	_getch();
 	system("cls");
