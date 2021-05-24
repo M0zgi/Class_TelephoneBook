@@ -29,8 +29,5 @@
     <ClInclude Include="PhoneBook.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="User.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
