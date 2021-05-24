@@ -27,7 +27,7 @@ public:
 	PhoneBook(const PhoneBook& obj);
 
 	//поиск абонента
-	void SearchAbon(PhoneBook* p, char const* charsearch);
+	void SearchAbon(PhoneBook* p, char const* charsearch, int const countabon);
 
 	//деструктор
 	~PhoneBook();

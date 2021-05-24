@@ -99,7 +99,7 @@ void MenuFun4()
 	cout << "Введите Фамилию, имя или отчество абонента: ";
 	cin.getline(charsearch, 30);
 
-	p->SearchAbon(p, charsearch);
+	p->SearchAbon(p, charsearch, countabon);
 	
 	_getch();
 	system("cls");

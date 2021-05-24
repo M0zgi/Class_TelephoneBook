@@ -46,11 +46,11 @@ PhoneBook::PhoneBook(const PhoneBook& obj)
 }
 
 
-void PhoneBook::SearchAbon(PhoneBook* p, char const* charsearch)
+void PhoneBook::SearchAbon(PhoneBook* p, char const* charsearch, int const countabon)
 {
 	int countsearch = 0;
 
-	for (size_t i = 0; i < 3; i++)
+	for (size_t i = 0; i < countabon; i++)
 	{
 		char* temp = strstr(p[i].FIO, charsearch);
 		if (temp)
@@ -62,15 +62,14 @@ void PhoneBook::SearchAbon(PhoneBook* p, char const* charsearch)
 				cout << "П/№" << " | " << "Абонент" << endl;
 			}
 
-			cout << p[i].number << ". " << p[i].FIO << endl;			
+			cout << p[i].number << ". " << p[i].FIO << ". " << p[i].MobPhone << endl;
 		}
 	}
 
 	if (countsearch < 1)
 	{
 		cout << "Абонентов не найдено" << endl;
-		cout << "Нажми любую кнопку для возврата к меню.";
-		
+		cout << "Нажми любую кнопку для возврата к меню.";		
 	}
 }
 
