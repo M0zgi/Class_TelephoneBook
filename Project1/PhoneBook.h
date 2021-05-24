@@ -31,7 +31,7 @@ public:
 
 	//добавление абонента
 
-	void AddAbon(PhoneBook*& p, int* countabon);
+	void AddAbon(PhoneBook*& p, int* countabon, int* _number);
 
 	//удаление абонента
 
