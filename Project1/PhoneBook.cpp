@@ -56,13 +56,21 @@ void PhoneBook::SearchAbon(PhoneBook* p, char const* charsearch)
 		if (temp)
 		{
 			countsearch++;
-			if (countsearch == 1)
+
+		    if (countsearch == 1)
 			{
 				cout << "П/№" << " | " << "Абонент" << endl;
 			}
 
-			cout << p[i].number << ". " << p[i].FIO << endl;
+			cout << p[i].number << ". " << p[i].FIO << endl;			
 		}
+	}
+
+	if (countsearch < 1)
+	{
+		cout << "Абонентов не найдено" << endl;
+		cout << "Нажми любую кнопку для возврата к меню.";
+		
 	}
 }
 
