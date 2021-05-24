@@ -29,6 +29,12 @@ public:
 	//поиск абонента
 	void SearchAbon(PhoneBook* p, char const* charsearch, int const countabon);
 
+	//добавление абонента
+
+	void AddAbon(PhoneBook*& p, int* countabon);
+
+	//удаление абонента
+
 	//деструктор
 	~PhoneBook();
 

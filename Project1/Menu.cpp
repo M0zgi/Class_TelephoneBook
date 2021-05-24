@@ -70,8 +70,7 @@ void MenuFun2()
 {
 	system("cls"); 
 
-	gotoxy(25, 10);
-	cout << "2";
+	p->AddAbon(p, &countabon);
 
 	_getch();
 	system("cls");

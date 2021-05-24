@@ -4,8 +4,8 @@
 PhoneBook::PhoneBook()
 {
 	number = 0;
-	*FIO = '-';
-	*MobPhone = '-';
+	FIO = new char[3]{"No"};
+	MobPhone = new char[3]{ "No" };
 }
 
 
@@ -16,7 +16,7 @@ PhoneBook::PhoneBook(int _number, const char* _fio, const char* _mobphone)
 	count_mobphone = strlen(_mobphone);	
 	
 	FIO = new char[count_fio + 1];
-	MobPhone = new char[count_fio + 1];
+	MobPhone = new char[count_mobphone + 1];
 
 	number = _number;
 	strcpy(FIO, _fio);
@@ -29,6 +29,59 @@ PhoneBook::~PhoneBook()
 	delete []FIO;
 	delete []MobPhone;
 	//cout << "DIS" << endl;
+}
+
+void PhoneBook::AddAbon(PhoneBook* &p, int* countabon)
+{
+	PhoneBook *temp = new PhoneBook [*countabon + 1];
+
+	char _fio, _mobphone;
+
+	for (size_t i = 0; i < *countabon; i++)
+	{
+	   
+		_fio = strlen(p[i].FIO);
+		_mobphone = strlen(p[i].MobPhone);
+		
+		temp[i].FIO = new char[_fio + 1];
+		temp[i].MobPhone = new char[_mobphone + 1];
+
+		strcpy(temp[i].FIO, p[i].FIO);
+		strcpy(temp[i].MobPhone, p[i].MobPhone);
+		
+	}
+
+	
+
+	/*for (size_t i = 0; i < *countabon; i++)
+	{
+		temp[i].ShowPhoneBook();
+	}
+
+	cout << "____________________\n";*/
+
+	
+		
+	
+
+	char buff[80];
+
+	cout << "Введите ФИО";
+	cin.getline(buff, 80);
+	_fio = strlen(buff);
+	temp[*countabon].FIO = new char[_fio + 1];
+    strcpy (temp[*countabon].FIO, buff);
+	
+	(*countabon)++;
+
+	/*for (size_t i = 0; i < *countabon; i++)
+	{
+		temp[i].ShowPhoneBook();
+	}*/
+		
+		delete[]p;
+
+		p = temp;
 }
 
 PhoneBook::PhoneBook(const PhoneBook& obj)
