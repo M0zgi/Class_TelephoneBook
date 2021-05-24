@@ -1,7 +1,6 @@
 ﻿#include"PhoneBook.h"
 
 
-
 /*******************************************
  * Menu using the arrow keys from keyboard *
  *      By: Osama Farah . Amman-Jordan     *
@@ -10,7 +9,7 @@
 
 //PhoneBook p;
 
-//счетчки количества абонентов в кгине
+//счетчки количества абонентов в книге
 int countabon = 3;
 
 //порядковый номер абонент в кгине
@@ -19,9 +18,9 @@ int number = 1;
 //Первоначальное заполнение абонентской книги
 PhoneBook* p = new PhoneBook[countabon]
 {
-	{number++, "Зеленский Петр Алексеевич", "+38(093)333333333"},
-	{number++, "Путин Владимир Александрович", "38097 777-333-333"},
-	{number++, "Порошенко Владимир Владимирович", "666"}
+	{number++, "Чепига Анатолий Владимирович", "+7(038)444-33-22"},
+	{number++, "Александр Евгеньевич Мишкин", "+7(048)000-33-21"},
+	{number++, "Порошенко Владимир Владимирович", "+38(666)0053321"}
 };
 
 
@@ -69,7 +68,7 @@ void MenuFun2()
 	system("cls"); 
 
 	p->AddAbon(p, &countabon, &number);
-
+	
 	_getch();
 	system("cls");
 }
@@ -78,8 +77,7 @@ void MenuFun3()
 {
 	system("cls"); 
 
-	gotoxy(25, 10);
-	cout << "3";
+	p->DelAbon(p, &countabon, &number);
 
 	_getch();
 	system("cls");

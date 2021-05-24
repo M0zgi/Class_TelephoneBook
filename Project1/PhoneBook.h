@@ -31,16 +31,20 @@ public:
 	void SearchAbon(PhoneBook* p, char const* charsearch, int const countabon);
 
 	//добавление абонента
-
 	void AddAbon(PhoneBook*& p, int* countabon, int* _number);
 
 	//удаление абонента
+	void DelAbon(PhoneBook*& p, int* countabon, int* _number);
 
 	//деструктор
 	~PhoneBook();
 
 	//печать книги абонентов
 	void ShowPhoneBook();
+
+	int Getnumber();
+	char GetFIO();
+	char GetMobPhone();
 
 };
 
