@@ -4,7 +4,7 @@
 #include <Windows.h>
 #include <string.h>
 #include <conio.h>
-
+#include <iomanip>
 
 using namespace std;
 
@@ -14,19 +14,25 @@ class PhoneBook
 
 private:
 
-	char *FIO;
+	int number;
+	char* FIO;
 	char* MobPhone;
 
 public:
 	
 	PhoneBook();
-	PhoneBook(const char *_fio, const char* _mobphone);
+	PhoneBook(int _number, const char *_fio, const char* _mobphone);
 	
 	//конструктор копирования
 	PhoneBook(const PhoneBook& obj);
 
+	//поиск абонента
+	void SearchAbon(PhoneBook* p, char const* charsearch);
+
+	//деструктор
 	~PhoneBook();
 
+	//печать книги абонентов
 	void ShowPhoneBook();
 
 };
