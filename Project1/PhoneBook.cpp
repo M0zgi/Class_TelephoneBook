@@ -152,12 +152,12 @@ void PhoneBook::DelAbon(PhoneBook*& p, int* countabon, int* _number)
 
 PhoneBook::PhoneBook(const PhoneBook& obj)
 {
-	int count_fio, count_mobphone;
-	count_fio = strlen(obj.FIO);
-	count_mobphone = strlen(obj.MobPhone);
+	//int count_fio, count_mobphone;
+	//count_fio = strlen(obj.FIO);
+	//count_mobphone = strlen(obj.MobPhone);
 
-	FIO = new char[count_fio + 1];
-	MobPhone = new char[count_fio + 1];
+	FIO = new char[strlen(obj.FIO) + 1];
+	MobPhone = new char[strlen(obj.MobPhone) + 1];
 
 	number = obj.number;
 	strcpy(FIO, obj.FIO);
